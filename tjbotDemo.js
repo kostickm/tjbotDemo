@@ -57,7 +57,7 @@ tj.listen(function (msg) {
     var containsSet = msg.indexOf('set') >= 0;
     var containsLight = msg.indexOf('the light') >= 0;
     var containsDisco = msg.indexOf('disco') >= 0;
-    var containsWaveArm = (str.indexOf('raise') >= 0 || str.indexOf('weave') >= 0 || str.indexOf('wave') >= 0 || str.indexOf('hello') >= 0) || str.indexOf('leave') >= 0) && (str.indexOf('arm') >= 0);
+    var containsWaveArm = ((str.indexOf('raise') >= 0 || str.indexOf('weave') >= 0 || str.indexOf('wave') >= 0 || str.indexOf('leave') >= 0) && (str.indexOf('arm') >= 0)) || (str.indexOf('hello') >= 0);
 
     if ((containsTurn || containsChange || containsSet) && containsLight) {
       // was there a color uttered?
