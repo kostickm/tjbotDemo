@@ -112,12 +112,6 @@ function waveArm(action) {
 
       if (times-- === 0) {
         clearInterval(pulse);
-        if (!isplaying) {
-          setTimeout(function () {
-            micInstance.resume();
-            iswaving = false;
-          }, 500);
-        }
 
         return;
       }
